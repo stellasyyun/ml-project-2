@@ -107,8 +107,8 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 
 ### Data
-Data Source
-Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
+Data Source: <br/>
+    Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
 
 Data Dictionary
 |variable                 |class     |description |
