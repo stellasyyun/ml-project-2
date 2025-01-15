@@ -92,18 +92,18 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             Support Vector Machine (SVM)
             Logistic Regression
 
-4.  Predict popularity of a new track by providing values for:
-        danceability <br/>
-        energy <br/>
-        key <br/>
-        loudness <br/>
-        speechiness <br/>
-        acousticness <br/>
-        instrumentalness <br/>
-        liveness <br/>
-        valence <br/>
-        tempo <br/>
-        duration_ms <br/>
+4.  Predict popularity of a new track by providing values for: <br/>
+            danceability <br/>
+            energy <br/>
+            key <br/>
+            loudness <br/>
+            speechiness <br/>
+            acousticness <br/>
+            instrumentalness <br/>
+            liveness <br/>
+            valence <br/>
+            tempo <br/>
+            duration_ms <br/>
 
 
 ### Data
