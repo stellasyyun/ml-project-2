@@ -158,7 +158,7 @@ Features Correlation <br/>
 Features Importance - Initial Model <br/>
 ![Importance](Images/old_model_feature_importance.png)
 
-Features Importance - Up[dated Model <br/>
+Features Importance - Updated Model <br/>
 ![Importance](Images/feature_importances.png)
 
 Trends in Popularity <br/>
