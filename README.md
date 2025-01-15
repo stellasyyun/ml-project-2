@@ -18,7 +18,7 @@
 
 ### Overview
 
-This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness,liveness, valence, tempo and duration. These featyrtuers  Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
+This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo and duration. Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
 
 #### Questions we aim to answer
 
@@ -51,7 +51,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
 
 [data_clean.ipynb](data_clean.ipynb) is the main notebook for training and testing data, and predicting results.
 
-1. Read the following CSV files from [./Resouces](./Resources/):
+1. Read the following CSV files from [./Resources](./Resources/):
 
         spotify_songs
 
