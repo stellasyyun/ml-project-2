@@ -149,6 +149,21 @@ Data Dictionary
 Popularity <br/>
 ![Popularity](Images/distribution_popularity_tiers.png)
 
+Confusion Matrix <br/>
+![Confusion](confusion_matrix.png)
+
+Features Correlation <br/>
+![Features](feature_correlation_heatmap.png)
+
+Features Importance <br/>
+![Importance](feature_importance.png)
+
+Trends in Popularity <br/>
+![Trends](trends_in_popularity)
+
+Actual vs Predicted
+![Actual-Predicted](actual_vs_predcited.png)
+
   
 ## Presentation
 
