@@ -116,7 +116,7 @@ Data Dictionary
 |track_id                 |character | Song unique ID|
 |track_name               |character | Song Name|
 |track_artist             |character | Song Artist|
-|track_popularity         |double    | Song Popularity (0-100) where higher is better |
+|track_popularity         |double    | Song Popularity (0-100) where higher is better. The popularity is calculated by algorithm and is based mainly on the total number of plays the track has had and how recent those plays are. |
 |track_album_id           |character | Album unique ID|
 |track_album_name         |character | Song album name |
 |track_album_release_date |character | Date when album released |
