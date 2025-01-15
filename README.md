@@ -155,14 +155,17 @@ Confusion Matrix <br/>
 Features Correlation <br/>
 ![Features](Images/feature_correlation_heatmap.png)
 
-Features Importance <br/>
+Features Importance - Initial Model <br/>
+![Importance](Images/old_model_feature_importance.png)
+
+Features Importance - Up[dated Model <br/>
 ![Importance](Images/feature_importances.png)
 
 Trends in Popularity <br/>
-![Trends](Images/trends_in_popularity)
+![Trends](Images/trends_in_popularity.png)
 
 Actual vs Predicted <br/>
-![Actual-Predicted](Images/actual_vs_predcited.png)
+![Actual-Predicted](Images/actual_vs_predicted.png)
 
   
 ## Presentation
