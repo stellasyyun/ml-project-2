@@ -156,12 +156,12 @@ Features Correlation <br/>
 ![Features](Images/feature_correlation_heatmap.png)
 
 Features Importance <br/>
-![Importance](Images/feature_importance.png)
+![Importance](Images/feature_importances.png)
 
 Trends in Popularity <br/>
 ![Trends](Images/trends_in_popularity)
 
-Actual vs Predicted
+Actual vs Predicted <br/>
 ![Actual-Predicted](Images/actual_vs_predcited.png)
 
   
