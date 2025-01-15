@@ -93,17 +93,17 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             Logistic Regression
 
 4.  Predict popularity of a new track by providing values for:
-        danceability
-        energy
-        key
-        loudness
-        speechiness
-        acousticness
-        instrumentalness
-        liveness
-        valence
-        tempo
-        duration_ms
+        danceability <br/>
+        energy <br/>
+        key <br/>
+        loudness <br/>
+        speechiness <br/>
+        acousticness <br/>
+        instrumentalness <br/>
+        liveness <br/>
+        valence <br/>
+        tempo <br/>
+        duration_ms <br/>
 
 
 ### Data
