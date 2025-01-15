@@ -161,7 +161,7 @@ Features Importance - Initial Model <br/>
 Features Importance - Updated Model <br/>
 ![Importance](Images/feature_importances.png)
 
-Improvement
+Improvement <br/>
 ![Improvement](Images/improvement_graph.png)
 
 Trends in Popularity <br/>
