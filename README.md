@@ -140,11 +140,11 @@ Data Dictionary
 
 ### Analysis
 
-1. **Is there a correlation between a song's features and it's popuilarity?**
+1. **Is there a correlation between a song's features and it's popularity?**
 
 2. **What feature has the highest importance in a song's popularity?**
 
-3. **Predict a song's popularity based on a set of features.What were the trends in the S&P 500, Yield Curve, CCI, Gold prices  Fedrates, inflation, and Unemployment as far as 1950s (varies by dataset) to the present?**
+3. **Predict a song's popularity based on a set of features.**
 
   
 ## Presentation
