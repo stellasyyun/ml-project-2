@@ -147,7 +147,7 @@ Data Dictionary
 3. **Predict a song's popularity based on a set of features.**
 
 Popularity
-![Popularity]([./images/distribution_popularity_tiers.png](https://github.com/stellasyyun/ml-project-2/blob/main/Images/distribution_popularity_tiers.png))
+![Popularity]([./images/distribution_popularity_tiers.png]
 
   
 ## Presentation
