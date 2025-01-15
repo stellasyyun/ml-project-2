@@ -147,7 +147,7 @@ Data Dictionary
 3. **Predict a song's popularity based on a set of features.**
 
 Popularity <br/>
-![Popularity](Images/distribution_popularity_tiers.png)
+![Popularity]<div align="center">(Images/distribution_popularity_tiers.png)
 
 Confusion Matrix <br/>
 ![Confusion](Images/confusion_matrix.png)
