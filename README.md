@@ -10,6 +10,8 @@
 
 [Analysis](#analysis)
 
+[Conclusion](#conclusion)
+
 [Presentation](#presentation)
 
 [The Team](#the-team)
@@ -18,50 +20,51 @@
 
 ### Overview
 
-This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo and duration. Specifically, we looked at how the differnet features impact a song's popularity as measured by Spotify.
+This project aims to predict the popularity of Spotify music tracks based on a song's features recorded on the Spotify API. These features include danceability, energy, key, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo and duration. Specifically, we looked at how the different features impact a song's popularity as measured by Spotify.
 
 #### Questions we aim to answer
 
-1. Is there a correlation between a song's features and it's popularity?
+1. Is there a correlation between a song's features and its popularity?
 2. What feature has the highest importance in a song's popularity?
-3. Predict a song's popularity based on a set of features.
+3. How accurately can a song's popularity be predicted based on its features?
 
 
 ### Instructions
 
-#### Execution
+#### Setup
 
-1. Ensure that the dependencies are installed to successfully import the below:
+1. Install Dependencies: Ensure that the following libraries are installed:
     
     import pandas as pd <br/>
+    import matplotlib.pyplot as plt <br/>
+    import seaborn as sns <br/>
     import numpy as np <br/>
-    from sklearn.preprocessing import StandardScaler, LabelEncoder<br/>
+    from sklearn.preprocessing import StandardScaler, LabelEncoder <br/>
     from sklearn.model_selection import train_test_split, GridSearchCV <br/>
-    from sklearn.preprocessing import StandardScaler <br/>
-    from sklearn.ensemble import RandomForestRegressor <br/>
-    from sklearn.metrics import accuracy_score <br/>
-    from sklearn.ensemble import RandomForestRegressor <br/>
-    import matplotlib.pyplot as plt<br/>
-    import seaborn as sns<br/>
+    from sklearn.metrics import accuracy_score, classification_report, confusion_matrix <br/>
+    from sklearn.neighbors import KNeighborsClassifier <br/>
+    from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier <br/>
+    from sklearn.linear_model import LogisticRegression <br/>
     
 
-1. Open and run [data_clean.ipynb](data_clean.ipynb) in a Jupyter Notebook or Jupyter Lab.
+2. Run the Analysis: Open and executethe notebook [combined_analysis.ipynb](combined_analysis.ipynb) in a Jupyter Notebook or Jupyter Lab.
 
-#### High-level logic contained in data_clean.ipynb:
+#### Logic Overview
 
-[data_clean.ipynb](data_clean.ipynb) is the main notebook for training and testing data, and predicting results.
+[combined_analysis.ipynb](combined_analysis.ipynb) is the main notebook for training and testing data, and predicting results.
 
 1. Read the following CSV files from [./Resources](./Resources/):
 
-        spotify_songs
+       spotify_songs
 
-2. Data cleaning
-
+2. Step 1: Data Cleaning <br/>
+   First Attempt 
+   
         Drop rows with duplicate track_id and track-name.
 
         Drop rows with missing or zero track_popularity.
    
-        Drop columns that will no be used in analyzing the data:
+        Drop columns that will not be used in analyzing the data:
             track_id
             track_album_release_date
             playlist_genre
@@ -73,42 +76,61 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             playlist_name
             playlist_id
             mode
-
-        Divide track-popularity into 4 tiers:
+            
+        Divide track-popularity into 3 tiers:
             0 ~ 31  : Not Popular
-            31 ~ 48 : Neutral
-            48 ~ 63 : Popular
-            63 ~ 100: Very Popular
+            32 ~ 48 : Neutral
+            49 ~ 63 : Popular
+            64 ~ 100: Very Popular
 
         Split data into train and test
 
         Encode and scale 'key' column
 
-3.  Modeling
+   Second Attempt
+        
+        Drop rows with duplicate track_id and track-name.
+
+        Drop rows with missing or zero track_popularity.
+   
+        Drop columns that will not be used in analyzing the data:
+            track_id
+            track_album_release_date
+            playlist_genre
+            track_name
+            track_artist
+            track_album_id
+            playlist_subgenre
+            track_album_name
+            playlist_name
+            playlist_id
+         
+        Normalize numerical columns
+        
+        Divide track-popularity into 3 tiers:
+            0 ~ 31  : Low
+            32 ~ 63 : Medium
+            64 ~ 100: High
+
+        Split data into train and test
+          
+3. Modeling <br/>
+   First attempt
 
         Apply and evaluate accuracy of various prediction models
             K Neighbors Classifier
-            Random Forest Classifier
-            Support Vector Machine (SVM)
             Logistic Regression
+            Random Forest Classifier
 
-4.  Predict popularity of a new track by providing values for: <br/>
-            danceability <br/>
-            energy <br/>
-            key <br/>
-            loudness <br/>
-            speechiness <br/>
-            acousticness <br/>
-            instrumentalness <br/>
-            liveness <br/>
-            valence <br/>
-            tempo <br/>
-            duration_ms <br/>
+    Second attempt
 
-
+        Apply and evaluate accuracy of various prediction models
+            Gradient Boosting Classifier
+            Logistic Regression
+            Random Forest Classifier with Grid
+            
 ### Data
-Data Source: <br/>
-    Spotify Songs - [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
+The dataset is sourced from [Kaggle's Spotify Songs Dataset](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
 
 Data Dictionary
 |variable                 |class     |description |
@@ -139,39 +161,106 @@ Data Dictionary
 
 
 ### Analysis
+Based on the distribution of songs' popularity, data was initially grouped into 4 tiers. Applying 3 different prediction models yielded accuracy scores of under 0.50. In an attempt to improve the accuracy scores, the data cleaning process was modified as follows:
 
-1. **Is there a correlation between a song's features and it's popularity?**
+        - Data was grouped into 3 tiers
+        - Numerical columns were normalized using Standard Scaler
+        - Apply other prediction models
+        
+These modifications resulted in significantly improved accuracy scores.
 
-2. **What feature has the highest importance in a song's popularity?**
+<div align="center">
+    
+|First Attempt                  |Second Attempt      |
+|:---|:-----------|
+|Logistic Regression: 0.3283 |Logstic Regression: 0.5008
+|K Neighbors Classifier: 0.3497 |Gradient Boosting Classifier: 0.5174
+|Random Forest Classifier: 0.4537 |Random Forest Classifier with Grid: 0.6454
 
-3. **Predict a song's popularity based on a set of features.**
+
+![Improvement](Images/improvement_graph.png)
+
+<div align="left">
+
+Popularity <br/>
+Majority of the music tracks popularity tiers follow a normal bell curve.
 
 <div align="center">
 
-Popularity <br/>
 ![Popularity](Images/distribution_popularity_tiers.png)
 
+<div align="left">
+
+Actual vs Predicted <br/>
+
+<div align="center">
+    
+![Actual-Predicted](Images/actual_vs_predicted.png)
+
+<div align="left">
+
 Confusion Matrix <br/>
+
+<div align="center">
+    
 ![Confusion](Images/confusion_matrix.png)
+
+<div align="left">
+
+Trends in Popularity <br/>
+Majority of the music tracks in the data set was released after 2010.
+
+<div align="center">
+    
+![Trends](Images/trends_in_popularity.png)
+
+<div align="left">
+    
+### Conclusion
+
+1. **Is there a correlation between a song's features and its popularity?**
+
+Based on the results of the correlation matrix, there is no strong correlation between audio features and a song's popularity.
+
+<div align="center">
+    
+|Feature                  |Correlation      |
+|:---|:-----------|
+|danceability | 0.64748
+|energy | -0.109112
+|key |-0.000650
+|loudness | 0.057687
+|speechiness | 0.006819
+|instrumentalness | -0.149872
+|liveness | -0.05458
+|valence |  0.033231
+|tempo | -0.005378
+|duration_ms | -0.143682
+
+<div align="left"> 
+    
+2. **What feature has the highest importance in a song's popularity?**
+9 of the 11 features analyzed contribute more than 0.08 in predicting a song's popularity. Loudness ranks the highest at just under 0.10, followed closely by duration_ms. These results are consistent with both attempts.
+
+<div align="center">
 
 Features Correlation <br/>
 ![Features](Images/feature_correlation_heatmap.png)
 
 Features Importance - Initial Model <br/>
-![Importance](Images/old_model_feature_importance.png)
+![Importance](Images/old_model_feature_importance.png) 
 
 Features Importance - Updated Model <br/>
 ![Importance](Images/feature_importances.png)
 
-Improvement <br/>
-![Improvement](Images/improvement_graph.png)
 
-Trends in Popularity <br/>
-![Trends](Images/trends_in_popularity.png)
+<div align="left"> 
+    
+3. **How accurately can a song's popularity be predicted based on its features?**
 
-Actual vs Predicted <br/>
-![Actual-Predicted](Images/actual_vs_predicted.png)
+The best-performing model (Random Forest Classifier with GridSearch) achieved an accuracy of 64.54%, showing moderate prediction capability. 
 
+This analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting song's popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
 
 <div align="left">
 ## Presentation
@@ -186,5 +275,3 @@ Actual vs Predicted <br/>
 [cfleming22](https://github.com/cfleming22)
 
 [GIBueno25](https://github.com/GIBueno25)
-
-
