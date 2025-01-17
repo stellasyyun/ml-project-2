@@ -77,7 +77,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
             playlist_id
             mode
             
-        Divide track-popularity into 3 tiers:
+        Divide track-popularity into 4 tiers:
             0 ~ 31  : Not Popular
             32 ~ 48 : Neutral
             49 ~ 63 : Popular
@@ -175,7 +175,7 @@ These modifications resulted in significantly improved accuracy scores.
 |:---|:-----------|
 |Logistic Regression: 0.3283 |Logstic Regression: 0.5008
 |K Neighbors Classifier: 0.3497 |Gradient Boosting Classifier: 0.5174
-|Random Forest Classifier: 0.4537 |Random Forest Classifier with Grid: 0.6454
+|Random Forest Classifier: 0.4537 |Random Forest Classifier with Grid Search: 0.6454
 
 
 ![Improvement](Images/improvement_graph.png)
@@ -239,13 +239,11 @@ Based on the results of the correlation matrix, there is no strong correlation b
 
 <div align="left"> 
     
-2. **What feature has the highest importance in a song's popularity?**
+2. **What feature has the highest importance in a song's popularity?** <br/>
+
 9 of the 11 features analyzed contribute more than 0.08 in predicting a song's popularity. Loudness ranks the highest at just under 0.10, followed closely by duration_ms. These results are consistent with both attempts.
 
 <div align="center">
-
-Features Correlation <br/>
-![Features](Images/feature_correlation_heatmap.png)
 
 Features Importance - Initial Model <br/>
 ![Importance](Images/old_model_feature_importance.png) 
@@ -253,6 +251,8 @@ Features Importance - Initial Model <br/>
 Features Importance - Updated Model <br/>
 ![Importance](Images/feature_importances.png)
 
+Features Correlation <br/>
+![Features](Images/feature_correlation_heatmap.png)
 
 <div align="left"> 
     
