@@ -127,7 +127,7 @@ This project aims to predict the popularity of Spotify music tracks based on a s
         Apply and evaluate accuracy of various prediction models
             Gradient Boosting Classifier
             Logistic Regression
-            Random Forest Classifier with Grid
+            Random Forest Classifier with GridSearch
             
 ### Data
 The dataset is sourced from [Kaggle's Spotify Songs Dataset](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/)
@@ -175,7 +175,7 @@ These modifications resulted in significantly improved accuracy scores.
 |:---|:-----------|
 |Logistic Regression: 0.3283 |Logstic Regression: 0.5008
 |K Neighbors Classifier: 0.3497 |Gradient Boosting Classifier: 0.5174
-|Random Forest Classifier: 0.4537 |Random Forest Classifier with Grid Search: 0.6454
+|Random Forest Classifier: 0.4537 |Random Forest Classifier with GridSearch: 0.6454
 
 
 ![Improvement](Images/improvement_graph.png)
