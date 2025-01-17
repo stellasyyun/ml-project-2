@@ -260,7 +260,7 @@ Features Correlation <br/>
 
 The best-performing model (Random Forest Classifier with GridSearch) achieved an accuracy of 64.54%, showing moderate prediction capability. 
 
-This analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting song's popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
+This analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting songs' popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaigns, social factors, cultural events and other factors.
 
 <div align="left">
     
