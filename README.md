@@ -226,7 +226,7 @@ Based on the results of the correlation matrix, there is no strong correlation b
     
 |Feature                  |Correlation      |
 |:---|:-----------|
-|danceability | 0.64748
+|danceability | 0.064748
 |energy | -0.109112
 |key |-0.000650
 |loudness | 0.057687
