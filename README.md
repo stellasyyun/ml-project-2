@@ -263,7 +263,9 @@ The best-performing model (Random Forest Classifier with GridSearch) achieved an
 This analysis reveals that a song's features should not be relied upon to predict a song's popularity. We suspect that predicting song's popularity is a complex undertaking because popularity is influenced by a mix of musical attributes, artists' marketing campaign, social factors, and cultural events. 
 
 <div align="left">
+    
 ## Presentation
+    
 [Predicting Popularity of Spotify Music Tracks Presentation](https://docs.google.com/presentation/d/1A1UIn5NqvjHRTJLpvWl-ElxfM1_YhF4gqIRhxEyoUus/edit#slide=id.g32c3d631087_1_10)
 
 ## The Team
