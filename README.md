@@ -163,7 +163,7 @@ Data Dictionary
 ### Analysis
 Based on the distribution of songs' popularity, data was initially grouped into 4 tiers. Applying 3 different prediction models yielded accuracy scores of under 0.50. In an attempt to improve the accuracy scores, the data cleaning process was modified as follows:
 
-        - Groip data into 3 tiers
+        - Group data into 3 tiers
         - Normalize numerical columns using Standard Scaler
         - Apply other prediction models
         
